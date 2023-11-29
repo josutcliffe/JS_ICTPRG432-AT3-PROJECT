@@ -1,0 +1,49 @@
+﻿<Window x:Class="JS_ICTPRG432_AT3_PROJECT.Addwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JS_ICTPRG432_AT3_PROJECT"
+        mc:Ignorable="d"
+        Title="Addwindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="24"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+        <Label Content="ID" Grid.Column="1" HorizontalAlignment="Left" Margin="9,9,0,0" Grid.Row="2" VerticalAlignment="Top" Width="254" Grid.ColumnSpan="2"/>
+        <Label Content="Given Name" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="248" Grid.ColumnSpan="2"/>
+        <Label Content="Family Name" Grid.Column="1" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="4" VerticalAlignment="Top" Width="254" Grid.ColumnSpan="2"/>
+        <Label Content="Date of Birth" Grid.Column="1" HorizontalAlignment="Left" Margin="6,5,0,0" Grid.Row="5" VerticalAlignment="Top" Width="264" Grid.ColumnSpan="2"/>
+        <Label Content="Gender" Grid.Column="1" HorizontalAlignment="Left" Margin="6,5,0,0" Grid.Row="6" VerticalAlignment="Top" Width="264" Grid.ColumnSpan="2"/>
+        <Label Content="Salary" Grid.Column="1" HorizontalAlignment="Left" Margin="6,5,0,0" Grid.Row="7" VerticalAlignment="Top" Width="264" Grid.ColumnSpan="2"/>
+        <Label Content="Supervisor ID" Grid.Column="1" HorizontalAlignment="Left" Margin="6,5,0,0" Grid.Row="8" VerticalAlignment="Top" Width="264" Grid.ColumnSpan="2"/>
+        <Label Content="Branch ID" Grid.Column="1" HorizontalAlignment="Left" Margin="6,5,0,0" Grid.Row="9" VerticalAlignment="Top" Width="264" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="IdText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="2"/>
+        <TextBox x:Name="GivenText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="3"/>
+        <TextBox x:Name="FamilyText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="4"/>
+        <TextBox x:Name="DOBText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="5"/>
+        <TextBox x:Name="GenderText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="6"/>
+        <TextBox x:Name="SalaryText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="7"/>
+        <TextBox x:Name="SupervisorText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="8"/>
+        <TextBox x:Name="BranchText" HorizontalAlignment="Left" Height="22" Margin="6,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="462" RenderTransformOrigin="0.852,2.951" Grid.Column="2" Grid.Row="9"/>
+        <Button x:Name="AddButton" Content="Add Employee" Grid.Column="2" HorizontalAlignment="Left" Margin="0.4,0.2,0,0" Grid.Row="10" VerticalAlignment="Top" Width="228" Height="47" Click="AddButton_Click"/>
+        <Button x:Name="ClearButton" Content="Clear Form" Grid.Column="2" HorizontalAlignment="Left" Margin="244.4,0.2,0,0" Grid.Row="10" VerticalAlignment="Top" Width="218" Height="47" Click="ClearButton_Click"/>
+    </Grid>
+</Window>

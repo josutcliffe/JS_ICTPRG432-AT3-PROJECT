@@ -1,0 +1,194 @@
+﻿<Window x:Class="JS_ICTPRG432_AT3_PROJECT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JS_ICTPRG432_AT3_PROJECT"
+        mc:Ignorable="d"
+        Title="JS_ICTPRG432-AT3-PROJECT" 
+        Height="450" 
+        Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="24"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="16"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="16"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="CompanyName" 
+               Grid.Column="1" 
+               Content="Incredibly Obvious Technologies" 
+               HorizontalAlignment="Left" 
+               Margin="82,8,0,0" 
+               VerticalAlignment="Top" 
+               FontWeight="Bold" 
+               FontSize="10" 
+               Grid.RowSpan="2"
+               />
+        <Label x:Name="LabelSummary" 
+               Grid.Column="1" 
+               Content="Making your data digital" 
+               HorizontalAlignment="Left" 
+               Margin="86,15,0,0" 
+               Grid.Row="1" 
+               VerticalAlignment="Top" 
+               FontFamily="Arial"
+               FontSize="10"
+               />
+        <Button 
+            x:Name="FillButton"
+            Content="List Employee Records" 
+            FontSize="16" 
+            Grid.Row="2"
+            Margin="14,20,550,78" 
+            Click="FillButton_Click" 
+            Grid.RowSpan="2" 
+            Grid.ColumnSpan="3" 
+            />
+        <ListBox 
+            x:Name="EmployeeListbox"
+            Grid.Column="2" 
+            Grid.Row="2"
+            Grid.RowSpan="3" 
+            Background="LightGray"
+            Margin="17,8,6,9"
+            Padding="8" 
+            Grid.ColumnSpan="2"
+            />
+        <Image HorizontalAlignment="Left"   
+               Height="80" 
+               Margin="23,4,0,0" 
+               VerticalAlignment="Top" 
+               Width="80"
+               Source="/Company_logo.jpg" 
+               Grid.RowSpan="3" 
+               Grid.ColumnSpan="2"
+               />
+
+        <Button 
+            x:Name="SearchButton"
+            Content="Search Records" 
+            FontSize="16" 
+            Grid.Row="3"
+            Margin="14,9,49,21" 
+            Grid.ColumnSpan="2" 
+            Click="SearchButton_Click" 
+            />
+        <TextBox
+            x:Name="SearchTextbox"
+            Grid.Column="2"
+            Grid.Row="1"
+            MinHeight="32"
+            Margin="8,8,8,8"
+            TextWrapping="wrap"
+            Text=""
+            FontSize="14"
+            />
+        <Button 
+            x:Name="AddEmployeeButton"
+            Content="Add Employee" 
+            FontSize="16" 
+            Grid.Row="4"
+            Margin="14,3,49,27" 
+            Grid.ColumnSpan="2" 
+            Click="AddEmployeeButton_Click" 
+            />
+        <Button 
+            x:Name="DeleteEmployeeButton"
+            Content="Delete Employee" 
+            FontSize="16" 
+            Grid.Row="4"
+            Margin="16,54,48,43" 
+            Grid.ColumnSpan="2" 
+            Grid.RowSpan="2" 
+            Click="DeleteEmployeeButton_Click" 
+            />
+        <Button 
+            x:Name="EditSalaryButton"
+            Content="Edit Salary" 
+            FontSize="16" 
+            Grid.Row="5"
+            Margin="17,38,47,59" 
+            Grid.ColumnSpan="2" 
+            Click="EditSalaryButton_Click" 
+            Grid.RowSpan="2"            
+            />
+        <Button 
+            x:Name="FilterByBranch"
+            Content="Filter by Branch" 
+            FontSize="16" 
+            Grid.Row="5"
+            Margin="17,1,272,29" 
+            Grid.Column="2" 
+            Click="FilterByBranch_Click" 
+            />
+        <Button 
+            x:Name="FilterBySalary"
+            Content="Filter by Salary" 
+            FontSize="16" 
+            Grid.Row="4"
+            Margin="269,67,21,30" 
+            Grid.Column="2" 
+            Click="FilterBySalary_Click" 
+            Grid.RowSpan="2" 
+            />
+        <TextBox x:Name="FilterBranchTextBox" 
+                 Grid.Column="2" 
+                 HorizontalAlignment="Left" 
+                 Margin="92,54,0,0" 
+                 Grid.Row="5" 
+                 TextWrapping="Wrap" 
+                 VerticalAlignment="Top" 
+                 Width="120" 
+                 Grid.RowSpan="2"/>
+        <TextBox x:Name="FilterSalaryTextBox" 
+            Grid.Column="2" 
+            HorizontalAlignment="Left" 
+            Margin="329,54,0,0" 
+            Grid.Row="5" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="120" 
+                 Grid.RowSpan="2"/>
+        <Label x:Name="FilterSalaryLabel" 
+               Grid.Column="2" 
+               Content="Salary:" 
+               HorizontalAlignment="Left" 
+               Margin="271,51,0,0" 
+               Grid.Row="5" 
+               VerticalAlignment="Top" 
+               Grid.RowSpan="2"/>
+        <Label x:Name="BranchIdLabel" 
+               Grid.Column="2" 
+            Content="Branch ID:" 
+            HorizontalAlignment="Left" 
+            Margin="15,47,0,0" 
+            Grid.Row="5" 
+            VerticalAlignment="Top" 
+            Grid.RowSpan="2"/>
+        <DataGrid x:Name="Datagrid" 
+                  Grid.Column="2" 
+                  Grid.Row="6" 
+                  Margin="74,15,79,2" 
+                  Grid.RowSpan="2"/>
+        <Button 
+            x:Name="ShowSalesButton"
+            Content="Show Total Sales" 
+            FontSize="16" 
+            Grid.Row="6"
+            Margin="16,20,48,10" 
+            Grid.ColumnSpan="2" 
+            Click="ShowSalesButton_Click" 
+            />
+    </Grid>
+</Window>
