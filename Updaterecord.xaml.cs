@@ -24,7 +24,8 @@ namespace JS_ICTPRG432_AT3_PROJECT
     //Student ID: 20107131
     //Email: 20107131@tafe.wa.edu.au
     //Cluster - Data Driven Applications - SQL
-    //Date Submitted: 30/11/2023
+    //Version 1.0
+    //Date Submitted: 29/11/2023
     //=========================================
 
     //n.b. I was unable to get the Edit record method (shown in the 14-WPF-IV.ppt (Data Binding)) working.
